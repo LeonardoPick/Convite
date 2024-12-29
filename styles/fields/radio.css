@@ -1,0 +1,147 @@
+.radio-wrapper {
+  width: 19.375rem;
+  height: 3.5625rem;
+  display: flex;
+  gap: 0.625rem;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 0.5rem;
+}
+
+.radio-inner {
+  margin: 4px;
+  border: 1px solid var(--stroke-default);
+  border-radius: 0.5rem;
+  width: 9.375rem;
+  display: flex;
+  position: relative;
+  & input,
+  & input:focus,
+  & input:hover {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+  svg {
+    width: 1rem;
+    height: 1rem;
+
+    position: absolute;
+    top: 0.9rem;
+    left: 1.25rem;
+  }
+
+  &:has(:checked) {
+    background-color: var(--input-stroke);
+    border-radius: 0.25rem;
+    color: var(--text-heading);
+    & svg path {
+      stroke: var(--brand-light);
+    }
+  }
+  & label {
+    position: absolute;
+    top: 0.8rem;
+    left: 3rem;
+  }
+}
+#labelf {
+  display: flex;
+  gap: 47%;
+  & label {
+    margin-bottom: -10px;
+    margin-top: -10px;
+  }
+}
+
+.radio-wrapper-color {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28px, 40px));
+  gap: 1rem;
+}
+.radio-inner-color {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.radio-inner-color input[type="radio"] {
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 6px solid var(--shape-button);
+}
+
+#cyan {
+  background-color: var(--cyan);
+}
+#brand-light {
+  background-color: var(--brand-light);
+}
+#navy {
+  background-color: var(--navy);
+}
+#purple {
+  background-color: var(--purple);
+}
+#fuschia {
+  background-color: var(--fuschia);
+}
+#pink {
+  background-color: var(--pink);
+}
+#danger {
+  background-color: var(--danger);
+}
+#orange {
+  background-color: var(--orange);
+}
+#yellow {
+  background-color: var(--yellow);
+}
+#lime {
+  background-color: var(--lime);
+}
+#green {
+  background-color: var(--green);
+}
+.radio-inner-color input[type="radio"]:checked {
+  outline: 2px solid var(--brand-light);
+}
+
+.radio-wrapper-theme {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 134px);
+
+  gap: 1rem;
+}
+
+.radio-inner-theme {
+  background-color: var(--shape-button);
+  height: 6.4375rem;
+  border: 1px solid var(--input-stroke);
+  border-radius: 0.5rem;
+
+  display: grid;
+  justify-items: center;
+
+  position: relative;
+  & input,
+  & input:focus,
+  & input:hover {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+  & img {
+    padding: 4px 4px 0px 4px;
+  }
+
+  &:has(:checked) {
+    border: 1px solid var(--brand-light);
+  }
+  & label {
+    margin-top: 0.5rem;
+  }
+}

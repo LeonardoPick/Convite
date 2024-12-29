@@ -1,0 +1,65 @@
+.theme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--text-body);
+  font: var(--Body-Sm);
+}
+
+.theme-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.slider {
+  position: relative;
+  width: 64px;
+  height: 32px;
+  background-color: var(--brand-light);
+  border-radius: 24px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  right: 3px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Estado escuro */
+
+#theme-toggle:checked + .content .slider {
+  background-color: #454545;
+}
+
+#theme-toggle:checked + .content .slider:before {
+  transform: translateX(-35px);
+  background-color: var(--input-stroke);
+}
+
+#theme-toggle:checked + .content .text {
+  content: "Escuro";
+}
+
+/* Texto do estado */
+
+#theme-toggle:checked + .content .text {
+  content: "Escuro";
+}
+
+.theme-switch .text::after {
+  content: "Claro";
+}
+
+#theme-toggle:checked + .content .theme-switch .text::after {
+  content: "Escuro";
+}

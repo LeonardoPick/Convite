@@ -1,0 +1,32 @@
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  all: unset;
+  font-weight: 500;
+  color: var(--text-highlight);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &.btn {
+    color: var(--text-heading);
+    background-color: var(--brand-dark);
+    width: 177px;
+    height: 48px;
+
+    &:hover,
+    &:focus {
+      background-color: var(--brand-mid);
+    }
+
+    & img {
+      width: 20px;
+      margin-right: 12px;
+      margin-left: 20px;
+    }
+  }
+}
